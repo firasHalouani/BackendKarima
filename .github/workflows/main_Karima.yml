@@ -34,7 +34,7 @@ jobs:
           path: '${{ github.workspace }}/target/*.jar'
 
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, Windows, X64]
     needs: build
     permissions:
       id-token: write #This is required for requesting the JWT
